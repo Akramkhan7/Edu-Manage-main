@@ -108,7 +108,7 @@ export default function Auth() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-slate-100 via-indigo-50 to-blue-100 px-4 py-10">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-slate-100 via-indigo-50 to-blue-100 px-4">
       <div className="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-indigo-500/20 blur-3xl"></div>
       <div className="absolute -right-24 -bottom-24 h-80 w-80 rounded-full bg-cyan-400/20 blur-3xl"></div>
 
