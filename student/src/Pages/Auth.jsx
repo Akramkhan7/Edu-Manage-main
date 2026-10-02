@@ -108,14 +108,14 @@ export default function Auth() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-slate-100 via-indigo-50 to-blue-100 px-4">
+    <div className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-linear-to-br from-slate-100 via-indigo-50 to-blue-100 px-4 py-3 sm:py-5">
       <div className="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-indigo-500/20 blur-3xl"></div>
       <div className="absolute -right-24 -bottom-24 h-80 w-80 rounded-full bg-cyan-400/20 blur-3xl"></div>
 
-      <div className="relative w-full max-w-lg">
+      <div className="relative w-full max-w-md">
         <div className="overflow-hidden rounded-3xl border border-white/70 bg-white/90 shadow-2xl backdrop-blur-xl">
-          <div className="bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-8 text-center text-white">
-            <h1 className="mt-5 text-3xl font-bold">
+          <div className="bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-5 text-center text-white sm:py-6">
+            <h1 className="text-2xl font-bold sm:text-3xl">
               {isLogin ? "Student Login" : "Student Registration"}
             </h1>
 
@@ -126,12 +126,12 @@ export default function Auth() {
             </p>
           </div>
 
-          <div className="p-8">
-            <form onSubmit={submitHandler} className="space-y-5">
+          <div className="p-5 sm:p-6">
+            <form onSubmit={submitHandler} className="space-y-3 sm:space-y-4">
               {!isLogin && (
                 <>
                   <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">
+                    <label className="mb-1.5 block text-sm font-medium text-slate-700">
                       Full Name
                     </label>
 
@@ -140,12 +140,12 @@ export default function Auth() {
                       placeholder="John Doe"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-100"
                     />
                   </div>
 
                   <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">
+                    <label className="mb-1.5 block text-sm font-medium text-slate-700">
                       Roll Number
                     </label>
 
@@ -154,14 +154,14 @@ export default function Auth() {
                       placeholder="2026CS001"
                       value={rollNo}
                       onChange={(e) => setRollNo(e.target.value)}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-100"
                     />
                   </div>
                 </>
               )}
 
               <div>
-                <label className="mb-2 block text-sm font-medium text-slate-700">
+                <label className="mb-1.5 block text-sm font-medium text-slate-700">
                   Email Address
                 </label>
 
@@ -170,12 +170,12 @@ export default function Auth() {
                   placeholder="student@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-100"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-100"
                 />
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium text-slate-700">
+                <label className="mb-1.5 block text-sm font-medium text-slate-700">
                   Password
                 </label>
 
@@ -184,14 +184,14 @@ export default function Auth() {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-100"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-100"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-70"
+                className="flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 py-2.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {loading ? (
                   <div className="flex items-center gap-3">
@@ -207,7 +207,7 @@ export default function Auth() {
               </button>
             </form>
 
-            <div className="my-6 flex items-center">
+            <div className="my-4 flex items-center">
               <div className="h-px flex-1 bg-slate-200"></div>
               <span className="px-4 text-xs font-semibold uppercase tracking-wider text-slate-400">
                 OR
@@ -217,7 +217,7 @@ export default function Auth() {
 
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="w-full rounded-xl border border-slate-200 py-3 font-medium text-slate-700 transition hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-600"
+              className="w-full rounded-xl border border-slate-200 py-2.5 font-medium text-slate-700 transition hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-600"
             >
               {isLogin
                 ? "Create New Account"
@@ -229,16 +229,14 @@ export default function Auth() {
               onClick={() =>
                 (window.location.href = `${import.meta.env.VITE_TEACHER_URL}`)
               }
-              className="mt-3 w-full rounded-xl border border-amber-200 bg-amber-50 py-3 font-medium text-amber-700 transition hover:bg-amber-100"
+              className="mt-2 w-full rounded-xl border border-amber-200 bg-amber-50 py-2.5 font-medium text-amber-700 transition hover:bg-amber-100"
             >
               Continue as Teacher →
             </button>
           </div>
         </div>
 
-        <p className="mt-6 text-center text-sm text-slate-500">
-          © 2026 EduManage • Student Portal
-        </p>
+       
       </div>
     </div>
   );
